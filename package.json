@@ -1,0 +1,22 @@
+{
+  "name": "gpt-win",
+  "version": "1.0.0",
+  "main": "main.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-packager . ChatGPT --out=dist --asar",
+    "app": "electron-builder"
+  },
+  "devDependencies": {
+    "electron": "^26.6.10",
+    "electron-builder": "^24.6.4"
+  },
+  "build": {
+    "productName": "chatgpt",
+    "nsis": {
+      "oneClick": false, 
+      "allowToChangeInstallationDirectory": true
+    }
+  }
+}
