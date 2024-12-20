@@ -22,7 +22,7 @@ function createWindow() {
     title: "ChatGPT",
     webPreferences: {
       preload: path.join(__dirname, "preload.js"),
-    },
+    }
   });
 
   createChildView();
@@ -90,6 +90,9 @@ function addShortcut() {
 
 function handleError(code, message) {
   let isRefresh = true;
+	if (code === -3) {
+		isRefresh = false;
+	}
   dialog
     .showMessageBox(mainWindow, {
       type: "error",

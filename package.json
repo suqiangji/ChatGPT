@@ -17,6 +17,9 @@
     "nsis": {
       "oneClick": false, 
       "allowToChangeInstallationDirectory": true
-    }
+    },
+		"win": {
+			"icon": "assets/icons/win/icon.png"
+		}
   }
 }
